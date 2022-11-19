@@ -1,0 +1,17 @@
+{
+  "name": "@builder/rollup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "dist/runtime-core.esm-bundler.js",
+  "types": "dist/runtime-core.d.ts",
+  "files": [
+    "index.js",
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
