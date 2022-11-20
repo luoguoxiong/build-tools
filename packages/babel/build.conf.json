@@ -1,0 +1,11 @@
+{
+  "formats": [
+    "esm-bundler",
+    "esm-bundler-runtime",
+    "cjs",
+    "global",
+    "global-runtime",
+    "esm-browser",
+    "esm-browser-runtime"
+  ]
+}

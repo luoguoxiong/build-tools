@@ -1,1 +1,1 @@
-export const rollup = 1;
+export const rollup: number = 1;
