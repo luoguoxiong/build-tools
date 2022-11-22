@@ -23,6 +23,9 @@ const getWorkSpaceTargets = ({ workspace = 'packages' }) => {
   });
 };
 
+const createConfig = (target) => {
+
+};
 const run = () => {
   const conf = require('./build.conf.json');
   let target;
