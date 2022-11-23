@@ -4,7 +4,7 @@ const ts = require('rollup-plugin-typescript2');
 const rollup = require('rollup');
 const chalk = require('chalk');
 
-const getWorkSpaceTargets = ({ workspace = 'packages' }) => {
+const getWorkSpaceTargets = (workspace) => {
   const cwd = process.cwd();
   const targetDir = path.join(cwd, workspace);
   const targetPackages = fs.readdirSync(targetDir);
