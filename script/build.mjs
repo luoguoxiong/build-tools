@@ -53,7 +53,7 @@ async function run(){
         ts({
           check: false,
           tsconfig: path.join(__dirname, '../tsconfig.json'),
-          cacheRoot: path.join(__dirname, '../node_modules/.rts2_cache'),
+          cacheRoot: path.join(__dirname, './node_modules/.rts2_cache'),
           clean: true,
         }),
         [

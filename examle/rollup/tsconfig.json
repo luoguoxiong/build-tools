@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "outDir": "dist",
+      "sourceMap": false,
+      "target": "ES2015",
+      "useDefineForClassFields": false,
+      "moduleResolution": "node",
+      "allowJs": false,
+      "strict": true,
+      "noUnusedLocals": true,
+      "experimentalDecorators": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "removeComments": false,
+      "declaration": true,
+      "declarationMap": false,
+      "inlineSourceMap": true,
+      "jsx": "react",
+      "lib": ["esnext", "dom"],
+      "types": ["node"],
+      "rootDir": "./src",
+      "paths": {
+          "@utils": ["./src/utils"],
+      }
+    }
+  }

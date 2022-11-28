@@ -3,6 +3,12 @@ import fs from 'fs-extra';
 
 const cwd = process.cwd();
 
+const paths = {
+  cwd: process.cwd(),
+  confPath: path.join(cwd, './build.conf.json'),
+  rootTsPath: path.join(cwd, './tsconfig.json'),
+};
+
 const getWorkSpaceTargets = (workspace: string) => {
   const targetDir = path.join(cwd, workspace);
   const isExist = fs.existsSync(targetDir);
@@ -27,7 +33,7 @@ const getWorkSpaceTargets = (workspace: string) => {
 };
 
 const run = () => {
-  const conf = require(path.join(cwd, './build.conf.json'));
+  const conf = require(paths.confPath);
   let target;
   if(conf.workspaces && Array.isArray(conf.workspaces)){
     target = [].concat(...conf.workspaces.map((item: string) => getWorkSpaceTargets(item)));
