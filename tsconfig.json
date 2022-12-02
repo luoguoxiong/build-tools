@@ -22,6 +22,10 @@
     "rootDir": "./src",
     "paths": {
         "@utils": ["./src/utils"],
-    }
-  }
+    },
+    
+  },
+  "exclude": [
+    "*.less"
+  ]
 }

@@ -23,5 +23,8 @@
       "paths": {
           "@utils": ["./src/utils"],
       }
-    }
+    },
+    "exclude": [
+        "*.less"
+    ]
   }
