@@ -1,5 +1,5 @@
 const path = require('path');
-const { rollup } = require('rollup');
+const rollup = require('rollup');
 const commonjs = require('@rollup/plugin-commonjs');
 const typescript = require('rollup-plugin-typescript2');
 const resolve = require('@rollup/plugin-node-resolve');
@@ -10,7 +10,7 @@ const task = async({ input, outputDir, format, name = 'index' }) => {
   const cssOutPut = path.join(outputDir, `${name}.css`);
   const jsOutPut = path.join(outputDir, `${name}.js`);
 
-  const bundle = await rollup({
+  const bundle = await rollup.rollup({
     input: input,
     plugins: [
       commonjs(),
@@ -31,8 +31,11 @@ const task = async({ input, outputDir, format, name = 'index' }) => {
       }),
       typescript({
         check: false,
-        tsconfig: path.join(__dirname, './tsconfig.json'),
+        // tsconfig: path.join(__dirname, './tsconfig.json'),
         cacheRoot: path.join(__dirname, './node_modules/.rts2_cache'),
+        tsconfigOverride: {
+          declaration: format !== 'iffe',
+        },
         clean: true,
       }),
       jsx({

@@ -1,0 +1,1 @@
+{"version":3,"sources":["/Users/peroluo/github/build-tools/examle/swc/src/test.ts","/Users/peroluo/github/build-tools/examle/swc/src/index.ts"],"sourcesContent":["export const a = 2;\n","import { a } from './test';\n\nconsole.log(a);\n"],"names":[],"mappings":"AAAO,IAAM,IAAI;ACEjB,QAAQ,GAAG"}
